@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>GORE</RootNamespace>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Assets\LogoAlt1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\LogoAlt1.png</Link>
+    </Content>
+    <Content Include="Assets\LogoAlt2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\LogoAlt2.png</Link>
+    </Content>
+    <Content Include="Assets\LogoAlt3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\LogoAlt3.png</Link>
+    </Content>
+    <Content Include="Assets\LogoAlt4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\LogoAlt4.png</Link>
+    </Content>
+    <Content Include="Assets\LogoAlt5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\LogoAlt5.png</Link>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240802000" />
+    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="UI\BattleResultScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="UI\BattleScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="UI\MainMenuScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="UI\WorldMapScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>
